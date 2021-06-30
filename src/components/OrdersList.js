@@ -40,7 +40,7 @@ const OrderList = ({ orderData }) => {
 
   return (
     <section className='wrapper'>
-      <div className='table-container'>
+      <div className='table-header'>
         <div className='status '>STATUS</div>
         <div className='delivery-day '>DELIVERY DAY</div>
         <div className='supplier '>SUPPLIER</div>
