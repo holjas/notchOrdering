@@ -5,10 +5,11 @@ import testdata from "../response.json";
 
 
 import Filters from "./Filters";
+import OrderList from "./OrdersList";
 
 const Content = () => {
     const [orderList, setOrderList] = useState([]);
-    const [vendor, setVendorName] = useState()
+    const [vendor, setVendorName] = useState("allSuppliers")
 
     //testing only. using local data
     useEffect(()=> {
@@ -30,6 +31,7 @@ const handleSelect = (e) => {
     return ( 
         <>
         <Filters vendors={orderList.data} handleSelect={handleSelect}/>
+        <OrderList orderData={orderList.data}/>
         </>
      );
 }

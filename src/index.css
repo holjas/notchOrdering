@@ -1,6 +1,7 @@
 /* set up */
 html {
   font-size: 18px;
+  font-family: sans-serif;
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -243,7 +244,10 @@ template {
   clip: rect(1px, 1px, 1px, 1px);
   white-space: nowrap; /* added line */
 }
-
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 /* my stuff */
 :root {
   --primary: #2d0d6d;
@@ -256,4 +260,74 @@ nav {
   background: var(--primary) url("./assets/logo.svg") no-repeat center;
   background-size: 100px auto;
   height: 3.7rem;
+}
+.navbar {
+  background-color: var(--primary);
+}
+/* ------------------------------------------------------------- */
+/* OrderList Component */
+.table-container,
+.table-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 0.5fr;
+  align-items: center;
+  grid-template-areas: "status delivery-day supplier total";
+  padding-left: 20px;
+}
+.table-container {
+  grid-template-rows: 75px;
+  border: 1px solid lightgray;
+}
+.table-row {
+  grid-template-rows: 50px;
+  gap: 20px 0px;
+  grid-auto-flow: row;
+  border-bottom: 1px solid lightgray;
+}
+
+.status {
+  grid-area: status;
+}
+
+.delivery-day {
+  grid-area: delivery-day;
+}
+
+.supplier {
+  grid-area: supplier;
+}
+
+.total {
+  grid-area: total;
+}
+/* status buttons */
+.status-btn {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 5px 10px;
+  margin: auto 10px;
+  border-radius: 40px;
+}
+.status-paid {
+  background-color: lightgreen;
+  color: darkgreen;
+}
+.status-delivered {
+  background-color: plum;
+  color: purple;
+}
+.status-cart {
+  background-color: lightskyblue;
+  color: mediumblue;
+}
+.isBYOS {
+  background-color: rgb(46, 46, 46);
+  color: white;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+.isPendingVendor {
+  background-color: yellow;
+  text-transform: none;
 }
