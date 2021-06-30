@@ -64,17 +64,14 @@ const OrderList = ({ orderData }) => {
               <div className='supplier'>
                 <p>
                   {order.vendorName}
-                  {/* is vendor BYOS? */}
-                  {order.isBYOS ? (
+                  {/* is vendor BYOS, show token */}
+                  {order.isBYOS && (
                     <span className='isBYOS status-btn'>market</span>
-                  ) : (
-                    ""
                   )}
-                  {/* is vendor pending onboarding? */}
-                  {order.isPendingVendorOnboarding ? (
+
+                  {/* is vendor pending onboarding, show token */}
+                  {order.isPendingVendorOnboarding && (
                     <span className='isPendingVendor status-btn'>1st</span>
-                  ) : (
-                    ""
                   )}
                 </p>
               </div>

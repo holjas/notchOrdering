@@ -6,7 +6,6 @@ const Filters = ({ vendors, handleSelect }) => {
         sort supplier by
       </label>
       <select name='sortByList' id='sortByList' onChange={handleSelect}>
-         {" "}
         <option value='allSuppliers' defaultValue>
           All Suppliers
         </option>
@@ -20,7 +19,9 @@ const Filters = ({ vendors, handleSelect }) => {
             );
           })}
       </select>
-      <button>Reset Filters</button>
+      <button onClick={handleSelect} value='allSuppliers'>
+        Reset Filters
+      </button>
     </section>
   );
 };

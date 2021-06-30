@@ -8,7 +8,7 @@ import OrderList from "./OrdersList";
 
 const Content = () => {
   const [orderList, setOrderList] = useState([]);
-  const [vendor, setVendorName] = useState("");
+  const [vendor, setVendorName] = useState("allSuppliers");
   const [sortedVendor, setSortedVendor] = useState([]);
 
   //testing only.!!!!!! using local data
@@ -25,20 +25,16 @@ const Content = () => {
 
   //view order list by selected supplier
   useEffect(() => {
-    // console.log("new use efffect fired");
-    if (vendor) {
-      setVendorName(vendor);
-      // console.log("new vendor name", vendor);
+    if (vendor === "allSuppliers") {
+      setSortedVendor(orderList);
+    } else {
       const mything = orderList.filter((order) => order.vendorName === vendor);
       setSortedVendor(mything);
     }
-    // if (vendor === "allSupplier") {
-    //   setSortedVendor(orderList);
-    // }
   }, [vendor, orderList]);
 
-  console.log("Orderlist ", orderList);
-  console.log("sortedvendor", sortedVendor);
+  //   console.log("Orderlist ", orderList);
+  //   console.log("sortedvendor", sortedVendor);
   // console.log("test data", testdata);
   // console.log("iam orderlist", orderL#2d0d6dist)
   // console.log("vendor= ", vendor)
