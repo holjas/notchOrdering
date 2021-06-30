@@ -249,15 +249,9 @@ template {
   margin: 0 auto;
 }
 /* my stuff */
-:root {
-  --primary: #2d0d6d;
-  --white: #f1f1f1;
-  --black: #121212;
-  --darkGrey: #7a7a7a;
-  --lightGrey: #d6d6d6;
-}
+
 nav {
-  background: var(--primary) url("./assets/logo.svg") no-repeat center;
+  background: #2d0d6d url("./assets/logo.svg") no-repeat center;
   background-size: 100px auto;
   height: 3.7rem;
 }
