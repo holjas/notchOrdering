@@ -10,7 +10,7 @@ const Filters = ({ vendors, handleSelect }) => {
           <option value='allSuppliers' defaultValue>
             All Suppliers
           </option>
-          {/* dropdown menu populated with all supplies */}
+          {/* dropdown menu populated with all of the suppliers/vendors */}
           {vendors &&
             vendors.map((vendor) => {
               return (

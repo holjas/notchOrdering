@@ -64,18 +64,19 @@ const OrderList = ({ orderData }) => {
               <div className='supplier'>
                 <p>
                   {order.vendorName}
-                  {/* is vendor BYOS, show token */}
+                  {/* if vendor BYOS is true, show token */}
                   {order.isBYOS && (
                     <span className='isBYOS status-btn'>market</span>
                   )}
 
-                  {/* is vendor pending onboarding, show token */}
+                  {/* if vendor pending onboarding is true, show token */}
                   {order.isPendingVendorOnboarding && (
                     <span className='isPendingVendor status-btn'>1st</span>
                   )}
                 </p>
               </div>
               <div className='total'>
+                {/* do not show $0 value */}
                 <p>{order.total !== 0 ? "$" + order.total.toFixed(2) : ""}</p>
               </div>
             </div>
