@@ -22,7 +22,7 @@ const Content = () => {
   useEffect(() => {
     let data = {};
     axios({
-      url: "http://api.interview.staging.foodieorders.com/v3/orders/search",
+      url: "https://api.interview.staging.foodieorders.com/v3/orders/search",
       method: "POST",
       headers: {
         "Content-Type": "text/plain",
