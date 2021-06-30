@@ -1,7 +1,4 @@
 import { useState, useEffect } from "react";
-// delete testdata
-//vring in axios and useeffect from app.js
-// import testdata from "../response.json";
 import axios from "axios";
 
 import Filters from "./Filters";
@@ -11,12 +8,6 @@ const Content = () => {
   const [orderList, setOrderList] = useState([]);
   const [vendor, setVendorName] = useState("allSuppliers");
   const [sortedVendor, setSortedVendor] = useState([]);
-
-  //testing only.!!!!!! using local data
-  //   useEffect(() => {
-  //     setOrderList(testdata.data);
-  //     setSortedVendor(testdata.data);
-  //   }, []);
 
   // load when component mounts, POST to capture data, set to state
   useEffect(() => {

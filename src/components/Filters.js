@@ -2,6 +2,7 @@ const Filters = ({ vendors, handleSelect }) => {
   return (
     <section className='filterSection'>
       <div className='wrapper'>
+        {/* dropdown menu populated with all of the suppliers/vendors */}
         <p>Supplier</p>
         <label htmlFor='sortByList' className='sr-only'>
           sort supplier by name, select from dropdown
@@ -10,7 +11,6 @@ const Filters = ({ vendors, handleSelect }) => {
           <option value='allSuppliers' defaultValue>
             All Suppliers
           </option>
-          {/* dropdown menu populated with all of the suppliers/vendors */}
           {vendors &&
             vendors.map((vendor) => {
               return (
