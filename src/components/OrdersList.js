@@ -11,7 +11,7 @@ const OrderList = ({ orderData }) => {
   };
   //date format to mmm, dd, yyyy
   const dateFormat = (date) => {
-    let monthStrings = [
+    const monthStrings = [
       "Jan.",
       "Feb.",
       "Mar.",
