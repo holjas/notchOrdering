@@ -253,7 +253,7 @@ template {
   --lightGrey: #d6d6d6;
 }
 nav {
-  background: var(--primary) url("./logo.svg") no-repeat center;
+  background: var(--primary) url("./assets/logo.svg") no-repeat center;
   background-size: 100px auto;
-  height: 5rem;
+  height: 3.7rem;
 }
