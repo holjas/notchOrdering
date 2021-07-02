@@ -40,8 +40,10 @@ const Content = () => {
     if (vendor === "allSuppliers") {
       setSortedVendor(orderList);
     } else {
-      const mything = orderList.filter((order) => order.vendorName === vendor);
-      setSortedVendor(mything);
+      const filteredArray = orderList.filter(
+        (order) => order.vendorName === vendor
+      );
+      setSortedVendor(filteredArray);
     }
   }, [vendor, orderList]);
 
